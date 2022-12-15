@@ -1,0 +1,21 @@
+version: '3'
+services:
+    python:
+        image: python:3.8-slim-buster
+        #restart: unless-stopped
+        #restart: on-failure
+        restart: always
+        volumes:
+            # монтируем директорию проекта
+            - ./files-generator-app:/app
+            # монтируем /tmp
+            - /tmp/streaming/in:/tmp
+        command: >
+            sh -c "cd /app &&
+                   python3 main.py --in ./resources --out /tmp"
+
+# уберу, файл пустой после pip3 freeze > requirements.txt
+# не нашлось особых зависимостей, которые надо дополнительно устанавливать
+#                 pip3 install -r requirements.txt &&
+
+            
