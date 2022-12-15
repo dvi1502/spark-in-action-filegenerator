@@ -33,6 +33,7 @@ def args_reader():
     * and 15s, if you say 20s, the system will wait between 10s and 30s, and
     * so on.
     """
+
     parser.add_argument(
         "--waitTime",
         dest='wait_time',
