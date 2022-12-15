@@ -62,7 +62,7 @@ def get_phone_number():
 def get_name_caller(args=None):
 
     if args is None:
-        resource_path = "../resources"
+        resource_path = "resources"
     else:
         resource_path = args.resource
 
