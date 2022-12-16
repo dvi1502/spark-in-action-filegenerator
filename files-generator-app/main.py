@@ -24,8 +24,9 @@ def makedir(npath):
     if not os.path.exists(npath):
         os.makedirs(npath)
     else:
-        for f in os.listdir(npath):
-            os.remove(os.path.join(npath, f))
+        pass
+        # for f in os.listdir(npath):
+        #     os.remove(os.path.join(npath, f))
 
 def get_random_time(args):
     """
